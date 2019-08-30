@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
+import Cards from "./components/Cards";
+import firebase from "./components/Firebase";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      user: null
+    };
+  }
+
+  conponentDidMount() {
+    const ref = firebase.database().ref("user");
+
+    ref.on("value", snapshot => {
+      let FBUser = snapshot.val();
+      this.setState({ user: FBUser });
+    });
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <form className="search-form">
+          <input className="search-bar" type="text" />
+          <button className="search-button" type="submit">
+            Search
+          </button>
+        </form>
+        <Cards />
+      </div>
+    );
+  }
 }
 
 export default App;
