@@ -63,3 +63,7 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
+$font-size: 50px;
+.example {
+  font-size: $font-size;
+}
