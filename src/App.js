@@ -1,7 +1,9 @@
-import React, { Component } from "react";
+import React, { useEffect, useState, Component } from "react";
 import ReactDOM from "react-dom";
 import Cards from "./components/Cards";
 import firebase from "./components/Firebase";
+import Searchbar from "./components/Searchbar";
+import Sidebar from "./components/Sidebar";
 import "./App.css";
 
 class App extends Component {
@@ -21,16 +23,19 @@ class App extends Component {
     });
   }
 
+  // const [cards, setCards] = useState([]);
+
+  // useEffect(() => {
+  //   const response = await fetch(
+
+  //   )
+
   render() {
     return (
-      <div className="App">
-        <form className="search-form">
-          <input className="search-bar" type="text" />
-          <button className="search-button" type="submit">
-            Search
-          </button>
-        </form>
+      <div>
+        <Searchbar />
         <Cards />
+        <Sidebar />
       </div>
     );
   }
