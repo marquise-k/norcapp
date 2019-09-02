@@ -1,16 +1,16 @@
-import React, { useEffect, useState, Component } from 'react';
-import ReactDOM from 'react-dom';
-import Cards from '../components/Cards';
+import React, { useEffect, useState, Component } from "react";
+import ReactDOM from "react-dom";
+import Cards from "../components/Cards";
 // import firebase from '../components/Firebase';
-import Searchbar from '../components/Searchbar';
-import Sidebar from '../components/Sidebar';
+import Searchbar from "../components/Searchbar";
+import Sidebar from "../components/Sidebar";
 // import './App.css';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      user: null,
+      user: null
     };
   }
 
@@ -34,6 +34,9 @@ class App extends Component {
     return (
       <div>
         <Searchbar />
+        <Cards />
+        <Cards />
+        <Cards />
         <Cards />
         <Sidebar />
       </div>

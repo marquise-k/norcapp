@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 
-class Searchbar extends React.Component {
+// eslint-disable-next-line react/prefer-stateless-function
+class Searchbar extends Component {
   render() {
     return (
+      // eslint-disable-next-line react/jsx-filename-extension
       <div className="App">
         <form className="search-form">
           <a href="/Dashboard">
@@ -10,7 +12,7 @@ class Searchbar extends React.Component {
               className="search-icon search-items"
               src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"
               alt=""
-            ></img>
+            />
           </a>
           <input
             className="search-bar"

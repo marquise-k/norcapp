@@ -1,7 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import '../styles.scss';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+import "../styles.scss";
+import App from "./App";
+import { loadDataBase } from "../lib/database.js";
 // import * as serviceWorker from './serviceWorker';
 // require('./styles.scss');
 
