@@ -19,5 +19,8 @@ module.exports = {
         "react"
     ],
     "rules": {
+        "arrow-parens": "off",
+        "comma-dangle": "off",
+        "space-before-function-paren": "off"
     }
 };
