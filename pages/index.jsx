@@ -28,21 +28,21 @@ App.getInitialProps = async function() {
       .limit(10)
       .get()
       .then(snapshot => {
-        const data = []
+        const data = [];
         snapshot.forEach(doc => {
           data.push({
             id: doc.id,
-            ...doc.data()
-          })
-        })
-        resolve(data)
+            ...doc.data(),
+          });
+        });
+        resolve(data);
       })
       .catch(() => {
-        reject(new Error('Something went wrong'))
-      })
-  })
-  return { cards: result }
-}
+        reject(new Error('Something went wrong'));
+      });
+  });
+  return { cards: result };
+};
 
 App.propTypes = {
   cards: PropTypes.arrayOf(
@@ -51,9 +51,9 @@ App.propTypes = {
       starttime: PropTypes.string,
       endtime: PropTypes.string,
       Description: PropTypes.string,
-      date: PropTypes.string
+      date: PropTypes.string,
     })
-  ).isRequired
-}
+  ).isRequired,
+};
 
-export default App
+export default App;
