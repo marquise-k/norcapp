@@ -1,20 +1,18 @@
 import React, { useEffect, useState, Component } from 'react';
-import fetch from 'isomorphic-unfetch';
 import Cards from '../components/Cards';
-// import firebase from '../components/Firebase';
 import Searchbar from '../components/Searchbar';
 import Sidebar from '../components/Sidebar';
 import './App.css';
 import firebase from '../lib/database';
 
 const App = (props) => {
-  console.log('props', props);
+  const { cards } = props;
 
   return (
     <div>
       <Searchbar />
-      {props.cards &&
-        props.cards.map(card => (
+      {cards
+        && cards.map((card) => (
           <Cards
             key={card.id}
             title={card.title}
