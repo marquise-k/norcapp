@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Sidebar = () => (
-  <div className="Sidebar-stuf">
+  <div className="sidebar-items">
     <a href="/Dashboard" className="button-menu buttons">
       Dashboard
     </a>

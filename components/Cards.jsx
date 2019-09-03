@@ -6,16 +6,15 @@ const Cards = ({ card }) => (
     {card && (
       <div className="wrapper">
         <div className="clash-card">
-          <img src="" alt="" />
-          <h4>{card.title}</h4>
-          <hr />
-          <h6>
+          <img className="card-image" src="" alt="" />
+          <h4 className="card-heading">{card.title}</h4>
+          <hr className="card-line" />
+          <p className="card-description">
             {card.starttime} - {card.endtime}
-          </h6>
-          <h6>{card.date}</h6>
-          <h6>Date</h6>
+          </p>
+          <p className="card-description">{card.date}</p>
           <p />
-          <p>{card.Description}</p>
+          <p className="card-description">{card.Description}</p>
         </div>
       </div>
     )}

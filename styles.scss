@@ -1,6 +1,13 @@
+// Importing Our Fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap');
+
+// Variables
+
 $white: #ffffff;
 $border-radius-size: 14px;
 $barbarian: #ec9b3b;
+$card-text-color: #585858;
+$font-stack: 'Roboto', sans-serif;
 
 body {
   background-color: #f2f2f2;
@@ -71,6 +78,7 @@ body {
   flex-wrap: wrap;
 }
 $font-size: 50px;
+
 .example {
   font-size: $font-size;
 }
@@ -93,7 +101,8 @@ $font-size: 50px;
 
 .clash-card {
   background: white;
-  width: 300px;
+  width: 218px;
+  height: 287px;
   display: inline-block;
   margin: auto;
   border-radius: $border-radius-size + 5;
@@ -102,6 +111,18 @@ $font-size: 50px;
   box-shadow: -1px 15px 30px -12px black;
   z-index: 9999;
 }
+
+.card-line {
+  color: #c1c0c0;
+  background-color: #c1c0c0;
+  width: 80%;
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+//TODO: Change the card color to the one I specified (it doesn't render that way)
 
 *,
 *:before,
@@ -128,5 +149,29 @@ $font-size: 50px;
 
 .button-menu {
   color: black;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-bottom: 50px;
+}
+
+.card-description {
+  color: $card-text-color;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+.card-heading {
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
   font-weight: bold;
 }
+
+.sidebar-items {
+  margin-top: 200px;
+  margin-left: 40px;
+}
+
+//TODO: Incorporate conditional formatting where if a page is up its black and if not its grey as per figma
