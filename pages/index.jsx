@@ -5,10 +5,10 @@ import Cards from '../components/Cards';
 import Searchbar from '../components/Searchbar';
 import Sidebar from '../components/Sidebar';
 import './App.css';
-import { loadFirebase } from '../lib/database';
+import firebase from '../lib/database';
 
 const App = (props) => {
-  console.log(props);
+  console.log('props', props);
 
   return (
     <div>
@@ -29,7 +29,7 @@ const App = (props) => {
 
 // eslint-disable-next-line func-names
 App.getInitialProps = async function () {
-  const firebase = await loadFirebase();
+  // const firebase = await loadFirebase();
 
   const result = await new Promise((resolve, reject) => {
     firebase
@@ -38,7 +38,6 @@ App.getInitialProps = async function () {
       .limit(10)
       .get()
       .then((snapshot) => {
-        console.log(snapshot);
         const data = [];
         snapshot.forEach((doc) => {
           data.push({
@@ -46,14 +45,12 @@ App.getInitialProps = async function () {
             ...doc.data(),
           });
         });
-        console.log(data);
         resolve(data);
       })
       .catch(() => {
         reject(new Error('Something went wrong'));
       });
   });
-  console.log(result);
   return { cards: result };
 };
 
