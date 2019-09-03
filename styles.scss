@@ -47,14 +47,13 @@ body {
   }
 }
 
+.search-button {
+  margin: auto
+}
+
 .search-icon {
-  position: relative;
-  float: right;
-  display: flex;
-  width: 20px;
-  height: 20px;
-  top: -62px;
-  right: -45px;
+  width: 75px;
+  height: 75px;
 }
 
 .search-items {
