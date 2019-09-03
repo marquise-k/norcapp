@@ -1,47 +1,59 @@
-import React, { useEffect, useState, Component } from "react";
-import ReactDOM from "react-dom";
-import Cards from "../components/Cards";
+import React, { useEffect, useState, Component } from 'react'
+import ReactDOM from 'react-dom'
+import Cards from '../components/Cards'
 // import firebase from '../components/Firebase';
-import Searchbar from "../components/Searchbar";
-import Sidebar from "../components/Sidebar";
-// import './App.css';
+import Searchbar from '../components/Searchbar'
+import Sidebar from '../components/Sidebar'
+import './App.css'
+import { loadFireBase } from '../lib/database.js'
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      user: null
-    };
+export default class App extends Component {
+  static async getInitialProps() {
+    let firebase = await loadFirebase()
+    let result = await new Promise((resolve, reject) => {
+      firebase
+        .firestore()
+        .collection('cards')
+        .limit(10)
+        .get()
+        .then(snapshot => {
+          let data = []
+          snapshot.forEach(doc => {
+            data.push(
+              Object.assign(
+                {
+                  id: doc.id
+                },
+                doc.data()
+              )
+            )
+          })
+          console.log(data)
+          resolve(data)
+        })
+        .catch(error => {
+          reject([])
+        })
+    })
+    console.log(result)
+    return { cards: result }
   }
 
-  // componentDidMount() {
-  //   const ref = firebase.database().ref('user');
-
-  //   ref.on('value', snapshot => {
-  //     let FBUser = snapshot.val();
-  //     this.setState({ user: FBUser });
-  //   });
-  // }
-
-  // const [cards, setCards] = useState([]);
-
-  // useEffect(() => {
-  //   const response = await fetch(
-
-  //   )
-
   render() {
+    const cards = this.props.cards
     return (
       <div>
         <Searchbar />
-        <Cards />
-        <Cards />
-        <Cards />
-        <Cards />
+        {cards.map(card => (
+          <Card
+            key={card.id}
+            title={card.title}
+            start_time={card.start_time}
+            end_time={card.end_time}
+          />
+        ))}
         <Sidebar />
       </div>
-    );
+    )
   }
 }
-
-export default App;
