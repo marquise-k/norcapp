@@ -28,6 +28,11 @@ body {
   align-items: right;
   display: flex;
   justify-content: right;
+  padding-left: 60px;
+  background-image: url('http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png');
+  background-repeat: no-repeat;
+  background-size: 60px 60px;
+  background-position: left center;
 
   &:focus {
     border: 1px solid #008abf;
@@ -104,6 +109,7 @@ $font-size: 50px;
 *:before,
 *:after {
   box-sizing: border-box;
+}
 
 .sideBar {
   height: 100%; /* Full-height: remove this if you want "auto" height */
