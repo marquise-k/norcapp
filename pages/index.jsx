@@ -7,19 +7,13 @@ import './App.css';
 import firebase from '../lib/database';
 import '../styles.scss';
 
-const App = (props) => {
+const App = props => {
   const { cards } = props;
 
   return (
     <div>
       <Searchbar />
-      {cards
-        && cards.map((card, index) => (
-          <Cards
-            card={card}
-            key={index}
-          />
-        ))}
+      {cards && cards.map((card, index) => <Cards card={card} key={index} />)}
       <Sidebar />
     </div>
   );
@@ -37,7 +31,7 @@ App.getInitialProps = async function () {
       .get()
       .then((snapshot) => {
         const data = [];
-        snapshot.forEach((doc) => {
+        snapshot.forEach(doc => {
           data.push({
             id: doc.id,
             ...doc.data(),
@@ -53,12 +47,14 @@ App.getInitialProps = async function () {
 };
 
 App.propTypes = {
-  cards: PropTypes.shape({
-    title: PropTypes.string,
-    start_time: PropTypes.string,
-    end_time: PropTypes.string,
-    Description: PropTypes.string,
-  }).isRequired,
+  cards: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string,
+      start_time: PropTypes.string,
+      end_time: PropTypes.string,
+      Description: PropTypes.string,
+    }),
+  ).isRequired,
 };
 
 export default App;

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class Searchbar extends Component {
@@ -7,7 +7,7 @@ class Searchbar extends Component {
       // eslint-disable-next-line react/jsx-filename-extension
       <div className="App">
         <form className="search-form">
-          <a href="/Dashboard">
+          <a href="/Dashboard" className="search-button">
             <img
               className="search-icon search-items"
               src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"
