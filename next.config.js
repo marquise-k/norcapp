@@ -1,13 +1,11 @@
 // next.config.js
-const withSass = require("@zeit/next-sass");
+const withSass = require('@zeit/next-sass');
 
-module.exports = withSass();
+const webpack = require('webpack');
+require('dotenv').config();
 
-const webpack = require("webpack");
-require("dotenv").config();
-
-module.exports = {
-  webpack: config => {
+module.exports = withSass({
+  webpack: (config) => {
     const env = Object.keys(process.env).reduce((acc, curr) => {
       acc[`process.env.${curr}`] = JSON.stringify(process.env[curr]);
       return acc;
@@ -16,5 +14,5 @@ module.exports = {
     config.plugins.push(new webpack.DefinePlugin(env));
 
     return config;
-  }
-};
+  },
+});

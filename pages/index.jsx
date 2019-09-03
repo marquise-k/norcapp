@@ -1,16 +1,14 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import '../styles.scss'
-import App from './App'
-import { loadFireBase } from '../lib/database.js'
+import React from 'react';
+import '../styles.scss';
+import App from './App';
 // import * as serviceWorker from './serviceWorker';
 // require('./styles.scss');
 
 function Home() {
-  return <App />
+  return <App />;
 }
 
-export default Home
+export default Home;
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
