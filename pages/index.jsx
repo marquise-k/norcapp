@@ -4,6 +4,7 @@ import Searchbar from '../components/Searchbar';
 import Sidebar from '../components/Sidebar';
 import './App.css';
 import firebase from '../lib/database';
+import '../styles.scss';
 
 const App = (props) => {
   const { cards } = props;
