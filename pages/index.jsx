@@ -12,12 +12,10 @@ const App = (props) => {
     <div>
       <Searchbar />
       {cards
-        && cards.map((card) => (
+        && cards.map((card, index) => (
           <Cards
-            key={card.id}
-            title={card.title}
-            start_time={card.start_time}
-            end_time={card.end_time}
+            card={card}
+            key={index}
           />
         ))}
       <Sidebar />
