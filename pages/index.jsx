@@ -20,7 +20,7 @@ const App = props => {
 };
 
 // eslint-disable-next-line func-names
-App.getInitialProps = async function() {
+App.getInitialProps = async function () {
   // const firebase = await loadFirebase();
 
   const result = await new Promise((resolve, reject) => {
@@ -29,7 +29,7 @@ App.getInitialProps = async function() {
       .collection('cards')
       .limit(10)
       .get()
-      .then(snapshot => {
+      .then((snapshot) => {
         const data = [];
         snapshot.forEach(doc => {
           data.push({
