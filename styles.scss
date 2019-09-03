@@ -6,7 +6,7 @@ $border-radius-size: 14px;
 $barbarian: #ec9b3b;
 
 body {
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
 }
 
 .search-form {
@@ -82,6 +82,7 @@ $font-size: 50px;
   margin: auto;
   width: 600px;
   text-align: center;
+  display: inline-block;
 }
 
 .wrapper {
@@ -127,4 +128,3 @@ $font-size: 50px;
   margin-left: 160px; /* Same as the width of the sidebar */
   padding: 0px 10px;
 }
-
