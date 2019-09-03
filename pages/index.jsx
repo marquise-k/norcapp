@@ -1,14 +1,14 @@
-import React, { useEffect, useState, Component } from 'react';
-import PropTypes from 'prop-types';
-import CardArea from '../components/CardArea';
-import Searchbar from '../components/Searchbar';
-import Sidebar from '../components/Sidebar';
-import './App.css';
-import firebase from '../lib/database';
-import '../styles.scss';
+import React, { useEffect, useState, Component } from 'react'
+import PropTypes from 'prop-types'
+import CardArea from '../components/CardArea'
+import Searchbar from '../components/Searchbar'
+import Sidebar from '../components/Sidebar'
+import './App.css'
+import firebase from '../lib/database'
+import '../styles.scss'
 
-const App = (props) => {
-  const { cards } = props;
+const App = props => {
+  const { cards } = props
 
   return (
     <div>
@@ -20,11 +20,11 @@ const App = (props) => {
         <CardArea cards={cards} />
       </div>
     </div>
-  );
-};
+  )
+}
 
 // eslint-disable-next-line func-names
-App.getInitialProps = async function () {
+App.getInitialProps = async function() {
   // const firebase = await loadFirebase();
 
   const result = await new Promise((resolve, reject) => {
@@ -33,32 +33,33 @@ App.getInitialProps = async function () {
       .collection('cards')
       .limit(10)
       .get()
-      .then((snapshot) => {
-        const data = [];
-        snapshot.forEach((doc) => {
+      .then(snapshot => {
+        const data = []
+        snapshot.forEach(doc => {
           data.push({
             id: doc.id,
-            ...doc.data(),
-          });
-        });
-        resolve(data);
+            ...doc.data()
+          })
+        })
+        resolve(data)
       })
       .catch(() => {
-        reject(new Error('Something went wrong'));
-      });
-  });
-  return { cards: result };
-};
+        reject(new Error('Something went wrong'))
+      })
+  })
+  return { cards: result }
+}
 
 App.propTypes = {
   cards: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string,
-      start_time: PropTypes.string,
-      end_time: PropTypes.string,
+      starttime: PropTypes.string,
+      endtime: PropTypes.string,
       Description: PropTypes.string,
-    }),
-  ).isRequired,
-};
+      date: PropTypes.string
+    })
+  ).isRequired
+}
 
-export default App;
+export default App
