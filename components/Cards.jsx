@@ -14,9 +14,9 @@ export default class extends Component {
             <img src="" alt="" />
             <h4>{card.title}</h4>
             <hr />
-            {/* <h6>
+            <h6>
               {card.start_time} - {card.end_time}
-            </h6> */}
+            </h6>
             <h6>Date</h6>
             <p />
             <p>{card.Description}</p>

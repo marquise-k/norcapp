@@ -1,4 +1,5 @@
 import React, { useEffect, useState, Component } from 'react';
+import PropTypes from 'prop-types';
 import Cards from '../components/Cards';
 import Searchbar from '../components/Searchbar';
 import Sidebar from '../components/Sidebar';
@@ -49,6 +50,15 @@ App.getInitialProps = async function () {
       });
   });
   return { cards: result };
+};
+
+App.propTypes = {
+  cards: PropTypes.shape({
+    title: PropTypes.string,
+    start_time: PropTypes.string,
+    end_time: PropTypes.string,
+    Description: PropTypes.string,
+  }).isRequired,
 };
 
 export default App;
