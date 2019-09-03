@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 
 const Sidebar = () => (
-  <div>
+  <div className="Sidebar-stuf">
     <a href="/Dashboard" className="button-menu buttons">
       Dashboard
     </a>
@@ -14,6 +14,6 @@ const Sidebar = () => (
       Directory
     </a>
   </div>
-);
+)
 
-export default Sidebar;
+export default Sidebar
