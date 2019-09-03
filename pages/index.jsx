@@ -1,20 +1,24 @@
 import React, { useEffect, useState, Component } from 'react';
 import PropTypes from 'prop-types';
-import Cards from '../components/Cards';
+import CardArea from '../components/CardArea';
 import Searchbar from '../components/Searchbar';
 import Sidebar from '../components/Sidebar';
 import './App.css';
 import firebase from '../lib/database';
 import '../styles.scss';
 
-const App = props => {
+const App = (props) => {
   const { cards } = props;
 
   return (
     <div>
-      <Searchbar />
-      {cards && cards.map((card, index) => <Cards card={card} key={index} />)}
-      <Sidebar />
+      <div className="sideBar">
+        <Sidebar />
+      </div>
+      <div className="main">
+        <Searchbar />
+        <CardArea cards={cards} />
+      </div>
     </div>
   );
 };
@@ -31,7 +35,7 @@ App.getInitialProps = async function () {
       .get()
       .then((snapshot) => {
         const data = [];
-        snapshot.forEach(doc => {
+        snapshot.forEach((doc) => {
           data.push({
             id: doc.id,
             ...doc.data(),
