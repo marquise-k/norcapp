@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Sidebar = () => (
-  <div>
+  <>
     <a href="/Dashboard" className="button-menu buttons">
       Dashboard
     </a>
@@ -13,7 +13,7 @@ const Sidebar = () => (
     <a href="/Directory" className="button-menu buttons">
       Directory
     </a>
-  </div>
+  </>
 );
 
 export default Sidebar;
