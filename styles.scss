@@ -2,10 +2,12 @@
 
 $background: #f2f2f2;
 $white: #ffffff;
+$border-radius-size: 14px;
+$barbarian: #ec9b3b;
 
 body {
   padding-top: 75px;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
 }
 
 .search-form {
@@ -71,4 +73,31 @@ body {
 $font-size: 50px;
 .example {
   font-size: $font-size;
+}
+
+.card-container {
+  margin: auto;
+  width: 600px;
+  text-align: center;
+}
+
+.wrapper {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.clash-card {
+  background: white;
+  width: 300px;
+  display: inline-block;
+  margin: auto;
+  border-radius: $border-radius-size + 5;
+  position: relative;
+  text-align: center;
+  box-shadow: -1px 15px 30px -12px black;
+  z-index: 9999;
 }

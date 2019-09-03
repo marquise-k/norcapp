@@ -8,7 +8,9 @@ export default class extends Component {
     const { card } = this.props
 
     return (
-      <div>
+      <div className="card-container">
+        <div className="wrapper" />
+        <div className="clash-card" />
         {card && (
           <div>
             <img src="" alt="" />
