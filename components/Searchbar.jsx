@@ -1,8 +1,6 @@
 import React from 'react';
 
-// eslint-disable-next-line react/prefer-stateless-function
 const Searchbar = () => (
-  // eslint-disable-next-line react/jsx-filename-extension
   <div className="App">
     <form className="search-form">
       <input
