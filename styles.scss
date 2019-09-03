@@ -6,8 +6,12 @@ $border-radius-size: 14px;
 $barbarian: #ec9b3b;
 
 body {
+<<<<<<< HEAD
   padding-top: 75px;
   background-color: #f2f2f2;
+=======
+  background-color: #F2F2F2;
+>>>>>>> 5ab8cc6ad1db0cbdfc93c4f0c7af55c172e599eb
 }
 
 .search-form {
@@ -99,4 +103,19 @@ $font-size: 50px;
   text-align: center;
   box-shadow: -1px 15px 30px -12px black;
   z-index: 9999;
+.sideBar {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 160px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+  background-color: white;
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidebar */
+  padding: 0px 10px;
 }
