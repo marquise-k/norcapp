@@ -6,9 +6,7 @@ $border-radius-size: 14px;
 $barbarian: #ec9b3b;
 
 body {
-  padding-top: 75px;
-  background-color: #f2f2f2;
-  background-color: #f2f2f2;
+  background-color: #F2F2F2;
 }
 
 .search-form {
@@ -101,6 +99,12 @@ $font-size: 50px;
   box-shadow: -1px 15px 30px -12px black;
   z-index: 9999;
 }
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+
 .sideBar {
   height: 100%; /* Full-height: remove this if you want "auto" height */
   width: 160px; /* Set the width of the sidebar */
@@ -118,8 +122,3 @@ $font-size: 50px;
   padding: 0px 10px;
 }
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
