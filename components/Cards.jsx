@@ -6,7 +6,7 @@ const Cards = ({ card }) => (
     {card && (
       <div className="wrapper">
         <div className="clash-card">
-          <img className="card-image" src="" alt="" />
+          <img className="card-image" src={card.photolink} alt="A picture" />
           <h4 className="card-heading">{card.title}</h4>
           <hr className="card-line" />
           <p className="card-description">
