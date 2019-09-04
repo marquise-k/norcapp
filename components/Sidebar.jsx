@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Sidebar = () => (
   <div className="sidebar-items">
@@ -14,6 +14,6 @@ const Sidebar = () => (
       Directory
     </a>
   </div>
-)
+);
 
-export default Sidebar
+export default Sidebar;
