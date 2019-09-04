@@ -205,4 +205,13 @@ $font-size: 50px;
   margin-top: 20px;
 }
 
+.navBar {
+  display: flex;
+
+  .signInButton {
+    width: 80px;
+  }
+}
+
+
 //TODO: Incorporate conditional formatting where if a page is up its black and if not its grey as per figma

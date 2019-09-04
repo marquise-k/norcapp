@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import CardArea from '../components/CardArea';
-import Searchbar from '../components/Searchbar';
 import Sidebar from '../components/Sidebar';
 import './App.css';
 import firebase from '../lib/database';
 import '../styles.scss';
+import NavBar from '../components/NavBar';
 
 const App = ({ cards }) => (
   <div>
@@ -13,7 +13,7 @@ const App = ({ cards }) => (
       <Sidebar />
     </div>
     <div className="main">
-      <Searchbar />
+      <NavBar />
       <CardArea cards={cards} />
     </div>
   </div>
