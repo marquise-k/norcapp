@@ -21,6 +21,7 @@ module.exports = {
     "rules": {
         "arrow-parens": "off",
         "comma-dangle": "off",
-        "space-before-function-paren": "off"
+        "space-before-function-paren": "off",
+        "no-trailing-spaces": "off"
     }
 };
