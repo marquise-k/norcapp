@@ -14,12 +14,12 @@ body {
 }
 
 .search-form {
-  width: 1000px;
   display: flex;
   margin: 0 auto;
   position: relative;
   top: 0;
-  right: -40px;
+  flex-grow: 1;
+  padding-left: 20px;
 }
 
 .card-image {
@@ -215,4 +215,33 @@ $font-size: 50px;
   margin-top: 20px;
 }
 
+<<<<<<< HEAD
+=======
+.navBar {
+  display: flex;
+
+  .profileArea {
+    width: 200px;
+    padding-left: 20px;
+    height: 20px;
+
+    .signedInArea {
+      display: flex;
+
+      .signedInImage {
+        width: 90px;
+        height: 90px;
+      }
+    }
+
+    .signInButton {
+      width: 80px;
+      flex-grow: 1;
+      height: 90px;
+    }
+  }
+}
+
+
+>>>>>>> 76d9cddea2462cdecab7f794f05d8efbef64bdcb
 //TODO: Incorporate conditional formatting where if a page is up its black and if not its grey as per figma
