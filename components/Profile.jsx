@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
+import { Context } from '../context/Context';
 
 const Profile = () => {
-  const [loggedIn, setLoggedIn] = useState(false);
+  const { loggedIn, setLoggedIn } = useContext(Context);
 
   const onClick = () => {
     setLoggedIn(!loggedIn);

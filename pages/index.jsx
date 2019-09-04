@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import CardArea from '../components/CardArea';
 import Sidebar from '../components/Sidebar';
@@ -6,18 +6,25 @@ import './App.css';
 import firebase from '../lib/database';
 import '../styles.scss';
 import NavBar from '../components/NavBar';
+import ContextProvider from '../context/ContextProvider';
 
-const App = ({ cards }) => (
-  <div>
-    <div className="sideBar">
-      <Sidebar />
-    </div>
-    <div className="main">
-      <NavBar />
-      <CardArea cards={cards} />
-    </div>
-  </div>
-);
+const App = ({ cards }) => {
+  const [loggedIn, setLoggedIn] = useState(false);
+
+  return (
+    <ContextProvider value={{ loggedIn, setLoggedIn }}>
+      <div>
+        <div className="sideBar">
+          <Sidebar />
+        </div>
+        <div className="main">
+          <NavBar />
+          <CardArea cards={cards} />
+        </div>
+      </div>
+    </ContextProvider>
+  );
+};
 
 // eslint-disable-next-line func-names
 App.getInitialProps = async function() {
