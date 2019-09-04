@@ -29,6 +29,7 @@ Cards.propTypes = {
     title: PropTypes.string,
     start_time: PropTypes.string,
     end_time: PropTypes.string,
-    Description: PropTypes.string
+    Description: PropTypes.string,
+    date: PropTypes.string
   }).isRequired
 }
