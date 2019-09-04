@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { Context } from '../context/Context';
+import { user } from '../assets';
 
 const Profile = () => {
   const { loggedIn, setLoggedIn } = useContext(Context);
@@ -8,15 +9,20 @@ const Profile = () => {
     setLoggedIn(!loggedIn);
   };
 
+  const profileArea = children => <div className="profileArea">{children}</div>;
+
   if (loggedIn) {
-    return (
-      <button onClick={onClick} type="button" className="signInButton">
-        Sign Out
-      </button>
+    return profileArea(
+      <div className="signedInArea">
+        <img src={user} className="signedInImage" alt="Profile" />
+        <button onClick={onClick} type="button" className="signInButton">
+          Sign Out
+        </button>
+      </div>
     );
   }
 
-  return (
+  return profileArea(
     <button onClick={onClick} type="button" className="signInButton">
       Sign In
     </button>
