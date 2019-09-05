@@ -28,8 +28,6 @@ body {
   border-radius: 50px;
   justify-content: right;
   position: relative;
-  right: -66px;
-  top: 15px;
 }
 
 .search-area {
@@ -100,6 +98,11 @@ $font-size: 50px;
   font-size: $font-size;
 }
 
+.card-area {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .card-container {
   // margin: auto;
   // padding-right: 40px;
@@ -128,6 +131,17 @@ $font-size: 50px;
   transition: all 0.3s 0s ease-in;
   z-index: 1;
   padding-left: 30px;
+
+  .card-first-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+
+    .going-button {
+      padding-right: 20px;
+    }
+  }
 }
 
 .wrapper {
@@ -182,6 +196,10 @@ $font-size: 50px;
   overflow-y: hidden;
   padding-top: 20px;
   background-color: white;
+
+  .sidebar-items-line {
+    display: flex;
+  }
 }
 
 .main {
