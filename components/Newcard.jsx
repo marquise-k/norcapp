@@ -29,7 +29,7 @@ class NewCard extends React.Component {
           <div className="card-container">
             <div className="wrapper">
               <div className="clash-card">
-                <img className="center-image" src={User} alt="The user image" />
+                <img className="center-image" src={user} alt="The user image" />
                 <input
                   className="input-event-title"
                   id="event-title"
