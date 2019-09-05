@@ -30,14 +30,14 @@ const Sidebar = () => (
 
       <div className="sidebar-items-line">
         <Link href="/CalendarPage" className="button-menu buttons">
-          <>
+          <a>
             <img
               className="sidebar-image"
               src={CalendarIcon}
               alt="A calendar"
             />
             <span className="sidebar-text">Calendar</span>
-          </>
+          </a>
         </Link>
       </div>
 
