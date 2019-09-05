@@ -4,10 +4,10 @@ import Cards from './Cards'
 import NewCard from './Newcard'
 
 const CardArea = ({ cards }) => (
-  <>
+  <div className="card-area">
     <NewCard />
     {cards && cards.map((card, index) => <Cards card={card} key={index} />)}
-  </>
+  </div>
 )
 
 export default CardArea
