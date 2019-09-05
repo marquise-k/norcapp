@@ -1,15 +1,16 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import CardArea from '../components/CardArea';
-import Sidebar from '../components/Sidebar';
-import './App.css';
-import firebase from '../lib/database';
-import '../styles.scss';
-import NavBar from '../components/NavBar';
-import ContextProvider from '../context/ContextProvider';
+import React, { useState } from 'react'
+import PropTypes from 'prop-types'
+import CardArea from '../components/CardArea'
+import Sidebar from '../components/Sidebar'
+import './App.css'
+import firebase from '../lib/database'
+import '../styles.scss'
+import NavBar from '../components/NavBar'
+import ContextProvider from '../context/ContextProvider'
+//import 'font-awesome/scss/font-awesome.scss'
 
 const App = ({ cards }) => {
-  const [loggedIn, setLoggedIn] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(false)
 
   return (
     <ContextProvider value={{ loggedIn, setLoggedIn }}>
@@ -23,8 +24,8 @@ const App = ({ cards }) => {
         </div>
       </div>
     </ContextProvider>
-  );
-};
+  )
+}
 
 // eslint-disable-next-line func-names
 App.getInitialProps = async function() {
@@ -32,24 +33,23 @@ App.getInitialProps = async function() {
     firebase
       .firestore()
       .collection('cards')
-      .limit(10)
       .get()
       .then(snapshot => {
-        const data = [];
+        const data = []
         snapshot.forEach(doc => {
           data.push({
             id: doc.id,
-            ...doc.data(),
-          });
-        });
-        resolve(data);
+            ...doc.data()
+          })
+        })
+        resolve(data)
       })
       .catch(() => {
-        reject(new Error('Something went wrong'));
-      });
-  });
-  return { cards: result };
-};
+        reject(new Error('Something went wrong'))
+      })
+  })
+  return { cards: result }
+}
 
 App.propTypes = {
   cards: PropTypes.arrayOf(
@@ -58,9 +58,9 @@ App.propTypes = {
       starttime: PropTypes.string,
       endtime: PropTypes.string,
       Description: PropTypes.string,
-      date: PropTypes.string,
+      date: PropTypes.string
     })
-  ).isRequired,
-};
+  ).isRequired
+}
 
-export default App;
+export default App

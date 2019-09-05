@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 
 const Searchbar = () => (
-  <>
+  <div className="search-area">
     <form className="search-form">
       <input
         className="search-bar"
@@ -10,7 +10,7 @@ const Searchbar = () => (
         placeholder="Search"
       />
     </form>
-  </>
-);
+  </div>
+)
 
-export default Searchbar;
+export default Searchbar

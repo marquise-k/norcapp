@@ -19,7 +19,7 @@ body {
   position: relative;
   top: 0;
   flex-grow: 1;
-  padding-left: 20px;
+  padding-left: 50px;
 }
 
 .card-image {
@@ -30,6 +30,10 @@ body {
   position: relative;
   right: -66px;
   top: 15px;
+}
+
+.search-area {
+  padding-left: 50px;
 }
 
 .search-bar {
@@ -45,7 +49,7 @@ body {
   align-items: right;
   display: flex;
   justify-content: right;
-  padding-left: 60px;
+  padding-left: 90px;
   background-image: url('http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png');
   background-repeat: no-repeat;
   background-size: 60px 60px;
@@ -86,7 +90,7 @@ body {
   flex-wrap: nowrap;
 }
 
-.buttons {
+.buttons .sidebar-items-line {
   display: flex;
   flex-wrap: wrap;
 }
@@ -123,6 +127,7 @@ $font-size: 50px;
   text-align: left;
   transition: all 0.3s 0s ease-in;
   z-index: 1;
+  padding-left: 30px;
 }
 
 .wrapper {
@@ -158,7 +163,7 @@ $font-size: 50px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-//TODO: Change the card color to the one I specified (it doesn't render that way)
+//TODO: Change the card line color to the one I specified (it doesn't render that way)
 
 *,
 *:before,
@@ -168,12 +173,13 @@ $font-size: 50px;
 
 .sideBar {
   height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 176px; /* Set the width of the sidebar */
+  width: 230px; /* Set the width of the sidebar */
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0;
   overflow-x: hidden; /* Disable horizontal scroll */
+  overflow-y: hidden;
   padding-top: 20px;
   background-color: white;
 }
@@ -190,6 +196,8 @@ $font-size: 50px;
   font-weight: bold;
   text-decoration: none;
   margin-bottom: 50px;
+  display: inline-block;
+  width: 50%;
 }
 
 .card-description {
@@ -241,3 +249,34 @@ $font-size: 50px;
 }
 
 //TODO: Incorporate conditional formatting where if a page is up its black and if not its grey as per figma
+
+.sidebar-text {
+  font-size: 16px;
+  padding: 20px 15px 20px 15px;
+  position: relative;
+  margin-top: 15px;
+}
+
+.sidebar-bottom-line {
+  position: relative;
+  margin: 450px auto;
+  display: flex;
+  flex-wrap: wrap;
+
+  //TODO: Fix help to stay put.
+}
+
+.sidebar-image {
+  padding: 20px 5px 20px 15px;
+  position: relative;
+  margin-top: 15px;
+}
+
+.button-menu {
+  display: flex;
+}
+
+.logo-area {
+  padding-bottom: 50px;
+  position: relative;
+}
