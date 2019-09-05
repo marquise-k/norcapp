@@ -9,6 +9,8 @@ $barbarian: #ec9b3b;
 $card-text-color: #969494;
 $font-stack: 'Roboto', sans-serif;
 
+$sidebarWidth: 230px;
+
 body {
   background-color: #f2f2f2;
 }
@@ -130,7 +132,6 @@ $font-size: 50px;
   text-align: left;
   transition: all 0.3s 0s ease-in;
   z-index: 1;
-  padding-left: 30px;
 
   .card-first-row {
     display: flex;
@@ -145,9 +146,7 @@ $font-size: 50px;
 }
 
 .wrapper {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  padding-left: 40px;
+  padding: 20px;
   display: inline-block;
   &:focus {
     outline: 0;
@@ -187,7 +186,7 @@ $font-size: 50px;
 
 .sideBar {
   height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 230px; /* Set the width of the sidebar */
+  width: $sidebarWidth; /* Set the width of the sidebar */
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
@@ -203,8 +202,7 @@ $font-size: 50px;
 }
 
 .main {
-  margin-left: 160px; /* Same as the width of the sidebar */
-  padding: 0px 10px;
+  margin-left: $sidebarWidth; /* Same as the width of the sidebar */
 }
 
 .button-menu {
@@ -297,4 +295,9 @@ $font-size: 50px;
 .logo-area {
   padding-bottom: 50px;
   position: relative;
+}
+
+.newCardButton {
+  background: none;
+  border: none;
 }

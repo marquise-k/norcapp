@@ -76,7 +76,7 @@ class NewCard extends React.Component {
       <div className="card-container">
         <div className="wrapper">
           <div className="clash-card">
-            <button onClick={this.toggleModal}>
+            <button className="newCardButton" onClick={this.toggleModal}>
               <img
                 className="plus-button"
                 src={PlusButton}
