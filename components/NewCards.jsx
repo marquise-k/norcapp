@@ -1,16 +1,16 @@
-import React, { useEffect, useRef } from 'react';
-import PlusButton from '../assets/plusbutton.png';
-import { Context } from '../context/Context';
-import Modal from './Modal';
-import { DoneIcon } from '../assets/checkmark-green-sized.png';
-import { user } from '../assets';
+import React, { useEffect, useRef } from 'react'
+import PlusButton from '../assets/plusbutton.png'
+import { Context } from '../context/Context'
+import Modal from './Modal'
+import { DoneIcon } from '../assets/checkmark-green-sized.png'
+import { user } from '../assets'
 
 class NewCard extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
-      showModal: false,
-    };
+      showModal: false
+    }
   }
 
   // const Modal = () => {
@@ -18,10 +18,10 @@ class NewCard extends React.Component {
   //     setModalState(ModelOpen);
   //   };
 
-  toggleModal = () => this.setState({ showModal: !this.state.showModal });
+  toggleModal = () => this.setState({ showModal: !this.state.showModal })
 
   render() {
-    const { showModal } = this.state;
+    const { showModal } = this.state
 
     if (showModal) {
       return (
@@ -29,7 +29,7 @@ class NewCard extends React.Component {
           <div className="card-container">
             <div className="wrapper">
               <div className="clash-card">
-                <img className="center-image" src={User} alt="The user image" />
+                <img className="center-image" src={user} alt="The user image" />
                 <input
                   className="input-event-title"
                   id="event-title"
@@ -67,7 +67,7 @@ class NewCard extends React.Component {
             </div>
           </div>
         </Modal>
-      );
+      )
     }
 
     //TODO: Update modal so the inputs feed info to firebase db to poulate new card
@@ -92,8 +92,8 @@ class NewCard extends React.Component {
           </div>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default NewCard;
+export default NewCard

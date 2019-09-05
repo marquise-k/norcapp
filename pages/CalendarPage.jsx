@@ -6,8 +6,8 @@ import firebase from '../lib/database'
 import '../styles.scss'
 import NavBar from '../components/NavBar'
 import ContextProvider from '../context/ContextProvider'
-import Searchbar from './Searchbar'
-import Directory from '../components/Directory'
+
+import Calendar from '../components/Calendar'
 
 const CalendarPage = () => {
   return (

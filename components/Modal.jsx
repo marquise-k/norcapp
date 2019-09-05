@@ -12,6 +12,10 @@ const Modal = ({ children }) => {
     const modalRoot = document.getElementById('modal')
     modalRoot.appendChild(elRef.current)
 
+    if (modalRoot !== null) {
+      container.appendChild(elem)
+    } else console.log('aaaaa')
+
     return () => modalRoot.removeChild(elRef.current)
   }, []) // Empty array added so useffect only runs once
 
@@ -19,3 +23,4 @@ const Modal = ({ children }) => {
 }
 
 export default Modal
+git
