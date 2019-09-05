@@ -1,16 +1,40 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Cards from './Cards'
-import NewCard from './Newcard'
+import React, { useContext, useState } from 'react';
+import PropTypes from 'prop-types';
+import Cards from './Cards';
+import NewCard from './NewCard';
+import { Context } from '../context/Context';
 
-const CardArea = ({ cards }) => (
-  <div className="card-area">
-    <NewCard />
-    {cards && cards.map((card, index) => <Cards card={card} key={index} />)}
-  </div>
-)
+// const filteredCards = filteredCards.filter(eachItem => {
+//   return (
+//     eachItem['title']
+//       .toLowerCase()
+//       .includes(this.state.queryText.toLowerCase()) ||
+//     eachItem['description']
+//       .toLowerCase()
+//       .includes(this.state.queryText.toLowerCase())
+//   )
+// })
 
-export default CardArea
+const CardArea = ({ cards }) => {
+  const { searchText } = useContext(Context);
+  const [filteredCards, setFilterCards] = useState(
+    cards.filter(
+      card =>
+        card.title.toLowerCase().includes(searchText.toLowerCase()) ||
+        card.Description.toLowerCase().includes(searchText.toLowerCase())
+    )
+  );
+
+  return (
+    <div className="card-area">
+      <NewCard />
+      {filteredCards &&
+        filteredCards.map((card, index) => <Cards card={card} key={index} />)}
+    </div>
+  );
+};
+
+export default CardArea;
 
 CardArea.propTypes = {
   cards: PropTypes.arrayOf(
@@ -18,7 +42,7 @@ CardArea.propTypes = {
       title: PropTypes.string,
       start_time: PropTypes.string,
       end_time: PropTypes.string,
-      Description: PropTypes.string
+      Description: PropTypes.string,
     })
-  ).isRequired
-}
+  ).isRequired,
+};

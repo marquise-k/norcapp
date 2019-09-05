@@ -10,9 +10,9 @@ import Searchbar from './Searchbar'
 import Directory from '../components/Directory'
 
 const DirectoryPage = ({ photos }) => (
-  <div>
+  <>
     <Directory photos={photos} />
-  </div>
+  </>
 )
 
 DirectoryPage.getInitialProps = async function() {
@@ -46,4 +46,4 @@ DirectoryPage.propTypes = {
   ).isRequired
 }
 
-export default App
+export default DirectoryPage;

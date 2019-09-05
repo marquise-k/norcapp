@@ -1,17 +1,20 @@
-import React, { useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import Searchbar from './Searchbar';
 import Profile from './Profile';
 
+const NavBar = () => {
+  const [query, setQuery] = useState('');
 
-searchCards(query) {
-  this.setState({queryText: query});
-}
-
-const NavBar = () => (
-  <div className="navBar">
-    <Searchbar searchCard={this.searchCards}/>
-    <Profile />
-  </div>
-);
+  const searchCards = queryCards => {
+    setQuery(queryCards);
+  };
+  
+  return (
+    <div className="navBar">
+      <Searchbar searchCard={searchCards} />
+      <Profile />
+    </div>
+  );
+};
 
 export default NavBar;

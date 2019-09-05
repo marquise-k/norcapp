@@ -1,15 +1,18 @@
-import React from 'react'
+import React, { useContext } from 'react';
+import { Context } from '../context/Context';
 
 const Searchbar = () => {
+  const { setSearchText } = useContext(Context);
+
   const updateSearch = e => {
-    setQueryText(e.target.value)
-  }
+    setSearchText(e.target.value);
+  };
 
   const getSearch = e => {
-    e.preventDefault()
-    setQueryText(search)
-    setSearch('') // set search back to empty string
-  }
+    // e.preventDefault()
+    setSearchText(e.target.value);
+    // setSearch(''); // set search back to empty string
+  };
 
   return (
     <div className="search-area">
@@ -19,11 +22,11 @@ const Searchbar = () => {
           id="search-bar"
           type="text"
           placeholder="Search"
-          value={search}
+          // value={search}
           onChange={updateSearch}
         />
       </form>
     </div>
-  )
-}
-export default Searchbar
+  );
+};
+export default Searchbar;
