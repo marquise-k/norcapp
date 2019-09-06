@@ -9,7 +9,7 @@ $barbarian: #ec9b3b;
 $card-text-color: #969494;
 $font-stack: 'Roboto', sans-serif;
 
-$sidebarWidth: 230px;
+$sidebarWidth: 260px;
 
 body {
   background-color: #f2f2f2;
@@ -17,7 +17,8 @@ body {
 
 .search-form {
   display: flex;
-  margin: 0 auto;
+  width: 2000px;
+  margin: 0 auto 40px;
   position: relative;
   top: 0;
   flex-grow: 1;
@@ -267,7 +268,7 @@ $font-size: 50px;
 //TODO: Incorporate conditional formatting where if a page is up its black and if not its grey as per figma
 
 .sidebar-text {
-  font-size: 16px;
+  font-size: 20px;
   padding: 20px 15px 20px 15px;
   position: relative;
   margin-top: 15px;
