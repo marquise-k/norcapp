@@ -17,7 +17,6 @@ body {
 
 .search-form {
   display: flex;
-  width: 2000px;
   margin: 0 auto 40px;
   position: relative;
   top: 0;
@@ -275,8 +274,13 @@ $font-size: 50px;
   margin-top: 15px;
   color: black;
   font-family: 'Roboto', sans-serif;
-  font-weight: bold;
+  font-weight: bold;  
 }
+
+.sidebar-text-selected {
+  color: grey !important;
+}
+
 
 .sidebar-bottom-line {
   position: relative;
@@ -352,4 +356,9 @@ $font-size: 50px;
   border: none;
   width: 120px;
   height: 40px;
+}
+
+.checkmark {
+  background: none;
+  border: none;
 }

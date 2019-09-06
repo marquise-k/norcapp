@@ -7,7 +7,9 @@ export const initialState = {
   setSearchText: () => {},
   Going: false,
   setGoing: () => {},
-  updatedCards: false
+  updatedCards: false,
+  newCard: false,
+  setNewCard: () => {}
 }
 
 export const Context = React.createContext(initialState)

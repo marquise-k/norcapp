@@ -1,16 +1,16 @@
-import React, { useEffect, useState } from 'react'
-import PropTypes from 'prop-types'
-import Sidebar from '../components/Sidebar'
-import './App.css'
-import firebase from '../lib/database'
-import '../styles.scss'
-import NavBar from '../components/NavBar'
-import ContextProvider from '../context/ContextProvider'
-import Directory from '../components/Directory'
+import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
+import Sidebar from '../components/Sidebar';
+import './App.css';
+import firebase from '../lib/database';
+import '../styles.scss';
+import NavBar from '../components/NavBar';
+import ContextProvider from '../context/ContextProvider';
+import Directory from '../components/Directory';
 
 const DirectoryPage = ({ directoryimage }) => {
-  const [loggedIn, setLoggedIn] = useState(true)
-  const [searchText, setSearchText] = useState('')
+  const [loggedIn, setLoggedIn] = useState(true);
+  const [searchText, setSearchText] = useState('');
 
   return (
     <ContextProvider
@@ -18,7 +18,7 @@ const DirectoryPage = ({ directoryimage }) => {
     >
       <div>
         <div className="sideBar">
-          <Sidebar />
+          <Sidebar value="directory" />
         </div>
         <div className="main">
           <NavBar />
@@ -26,8 +26,8 @@ const DirectoryPage = ({ directoryimage }) => {
         </div>
       </div>
     </ContextProvider>
-  )
-}
+  );
+};
 
 // // eslint-disable-next-line func-names
 // DirectoryPage.getInitialProps = async function() {
@@ -61,4 +61,4 @@ const DirectoryPage = ({ directoryimage }) => {
 //   ).isRequired
 // }
 
-export default DirectoryPage
+export default DirectoryPage;
