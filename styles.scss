@@ -34,6 +34,7 @@ body {
 
 .search-area {
   padding-left: 50px;
+  width: 100%;
 }
 
 .search-bar {
@@ -322,7 +323,7 @@ $font-size: 50px;
   height: 35px;
   border: 0;
   padding-bottom: 10px;
-  display: flex;
+  // display: flex;
   align-items: center;
   justify-content: center;
   padding: 10px;
@@ -332,7 +333,7 @@ $font-size: 50px;
 .form-field-large {
   height: 60px;
   border: 0px;
-  display: flex;
+  // display: flex;
   align-items: center;
   justify-content: center;
   padding: 10px;
@@ -348,4 +349,6 @@ $font-size: 50px;
 .button-sign {
   background: none;
   border: none;
+  width: 120px;
+  height: 40px;
 }
