@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import PlusButton from '../assets/plusbutton.png'
 import { Context } from '../context/Context'
-import Modal from './Modal'
 import { DoneIcon } from '../assets/checkmark-green-sized.png'
 import { user } from '../assets'
 
@@ -25,48 +24,46 @@ class NewCard extends React.Component {
 
     if (showModal) {
       return (
-        <Modal>
-          <div className="card-container">
-            <div className="wrapper">
-              <div className="clash-card">
-                <img className="center-image" src={user} alt="The user image" />
-                <input
-                  className="input-event-title"
-                  id="event-title"
-                  type="text"
-                  placeholder=""
+        <div className="card-container">
+          <div className="wrapper">
+            <div className="clash-card">
+              <img className="center-image" src={user} alt="The user image" />
+              <input
+                className="card-heading"
+                id="event-title"
+                type="text"
+                placeholder="Event title"
+              />
+              <hr className="card-line" />
+              <input
+                className="card-description"
+                id="event-time"
+                type="text"
+                placeholder="Event time"
+              />
+              <input
+                className="card-description"
+                id="event-date"
+                type="text"
+                placeholder="Event date"
+              />
+              <p />
+              <input
+                className="icard-description"
+                id="event-description"
+                type="text"
+                placeholder="Event description"
+              />
+              <button onClick={this.toggleModal}>
+                <img
+                  className="bottom-left-icon"
+                  src={DoneIcon}
+                  alt="A green checkmark"
                 />
-                <hr className="card-line" />
-                <input
-                  className="input-event-time"
-                  id="event-time"
-                  type="text"
-                  placeholder="Event time"
-                />
-                <input
-                  className="input-event-date"
-                  id="event-date"
-                  type="text"
-                  placeholder="Event date"
-                />
-                <p />
-                <input
-                  className="input-event-description"
-                  id="event-description"
-                  type="text"
-                  placeholder="Event description"
-                />
-                <button onClick={this.toggleModal}>
-                  <img
-                    className="bottom-left-icon"
-                    src={DoneIcon}
-                    alt="A green checkmark"
-                  />
-                </button>
-              </div>
+              </button>
             </div>
           </div>
-        </Modal>
+        </div>
       )
     }
 

@@ -6,36 +6,51 @@ import firebase from '../lib/database'
 import '../styles.scss'
 import NavBar from '../components/NavBar'
 import ContextProvider from '../context/ContextProvider'
-import Searchbar from './Searchbar'
 import Directory from '../components/Directory'
 
-const DirectoryPage = ({ photos }) => (
-  <>
-    <Directory photos={photos} />
-  </>
-)
+const DirectoryPage = ({ photos }) => {
+  const [loggedIn, setLoggedIn] = useState(false)
+  const [searchText, setSearchText] = useState('')
 
+  return (
+    <ContextProvider
+      value={{ loggedIn, setLoggedIn, searchText, setSearchText }}
+    >
+      <div>
+        <div className="sideBar">
+          <Sidebar />
+        </div>
+        <div className="main">
+          <NavBar />
+          <Directory photos={photos} />
+        </div>
+      </div>
+    </ContextProvider>
+  )
+}
+
+// eslint-disable-next-line func-names
 DirectoryPage.getInitialProps = async function() {
-  const result = await new Promise((resolve, reject) => {
+  const photoresult = await new Promise((resolve, reject) => {
     firebase
       .firestore()
       .collection('photos')
       .get()
       .then(snapshot => {
-        const data = []
+        const photodata = []
         snapshot.forEach(doc => {
-          data.push({
+          photodata.push({
             id: doc.id,
-            ...doc.data()
+            ...doc.photodata()
           })
         })
-        resolve(data)
+        resolve(photodata)
       })
       .catch(() => {
         reject(new Error('Something went wrong'))
       })
   })
-  return { photos: result }
+  return { photos: photoresult }
 }
 
 DirectoryPage.propTypes = {
@@ -46,4 +61,4 @@ DirectoryPage.propTypes = {
   ).isRequired
 }
 
-export default DirectoryPage;
+export default DirectoryPage

@@ -1,22 +1,28 @@
-// import React from 'react'
-// import PropTypes from 'prop-types'
+import React from 'react'
+import PropTypes from 'prop-types'
 
-// const Directory = ({photo}) => (
-// <div className="photo-container">
-//     {photo && (
-//         <div className="photo-wrapper">
-//         <img className="photo" src={photo.photo} alt="A picture" />
-//     )}
-//     {!photo && <p>Have nothing</p>}
-// </div>
+const Directory = ({ photo }) => {
+  const photos = photo.map(photo => (
+    <img
+      className="photo-images"
+      src={photo}
+      key="photo.toString()"
+      alt="A picture"
+    />
+  ))
 
-// )
+  return (
+    <div className="card-container">
+      {photo && <div className="wrapper">{photos}</div>}
+      {!photo && <p>Have nothing</p>}
+    </div>
+  )
+}
 
-// export default Directory
+export default Directory
 
-
-// Directory.propTypes = {
-//   photo: PropTypes.shape({
-//     photo: PropTypes.string,
-//   }).isRequired
-// }
+Directory.propTypes = {
+  photo: PropTypes.shape({
+    photo: PropTypes.string
+  }).isRequired
+}

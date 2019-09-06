@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import SignUpButton from '../assets/sign-up-button.png';
-import GoingButton from '../assets/going-button.png';
+import React from 'react'
+import PropTypes from 'prop-types'
+import SignUpButton from '../assets/sign-up-button.png'
+import GoingButton from '../assets/going-button.png'
 
 const Cards = ({ card }) => {
   // let filteredCards=this.props.cards.filter(
@@ -12,7 +12,7 @@ const Cards = ({ card }) => {
   const onClick = () => {
     // setSignUp(!signUp);
     // tell firebase to update card
-  };
+  }
 
   const returnSignUpButtonArea = () => {
     // if (!card.going) {
@@ -23,8 +23,8 @@ const Cards = ({ card }) => {
     //   );
     // }
 
-    return <img className="going-button" src={GoingButton} alt="A button" />;
-  };
+    return <img className="going-button" src={GoingButton} alt="A button" />
+  }
 
   return (
     <div className="card-container">
@@ -48,10 +48,10 @@ const Cards = ({ card }) => {
       )}
       {!card && <p>Have nothing</p>}
     </div>
-  );
-};
+  )
+}
 
-export default Cards;
+export default Cards
 
 Cards.propTypes = {
   card: PropTypes.shape({
@@ -61,5 +61,5 @@ Cards.propTypes = {
     Description: PropTypes.string,
     date: PropTypes.string,
     photolink: PropTypes.string
-  }).isRequired,
-};
+  }).isRequired
+}

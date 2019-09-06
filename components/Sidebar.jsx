@@ -1,11 +1,11 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react';
-import CalendarIcon from '../assets/calendaricon.png';
-import PeopleIcon from '../assets/peopleicon.png';
-import DashboardIcon from '../assets/dashboardicon.png';
-import HelpIcon from '../assets/helpicon.png';
-import AppLogo from '../assets/applogo.png';
-import Link from 'next/link';
+import React from 'react'
+import CalendarIcon from '../assets/calendaricon.png'
+import PeopleIcon from '../assets/peopleicon.png'
+import DashboardIcon from '../assets/dashboardicon.png'
+import HelpIcon from '../assets/helpicon.png'
+import AppLogo from '../assets/applogo.png'
+import Link from 'next/link'
 
 //import 'font-awesome/scss/font-awesome.scss'
 
@@ -16,15 +16,15 @@ const Sidebar = () => (
         <img className="app-logo" src={AppLogo} alt="A dashboard" />
       </div>
       <div className="sidebar-items-line">
-        <Link href="#" className="button-menu buttons">
-          <>
+        <Link href="/index" className="button-menu buttons">
+          <a>
             <img
               className="sidebar-image"
               src={DashboardIcon}
               alt="A dashboard"
             />
             <span className="sidebar-text">Dashboard</span>
-          </>
+          </a>
         </Link>
       </div>
 
@@ -43,10 +43,10 @@ const Sidebar = () => (
 
       <div className="sidebar-items-line">
         <Link href="/DirectoryPage" className="button-menu buttons">
-          <>
+          <a>
             <img className="sidebar-image" src={PeopleIcon} alt="A directory" />
             <span className="sidebar-text">Directory</span>
-          </>
+          </a>
         </Link>
       </div>
 
@@ -58,6 +58,6 @@ const Sidebar = () => (
       </div>
     </div>
   </>
-);
+)
 
-export default Sidebar;
+export default Sidebar
