@@ -19,8 +19,6 @@ const Sidebar = ({ value }) => {
     return 'sidebar-text';
   };
 
-  console.log(value);
-
   return (
     <>
       <div className="sidebar-items">
