@@ -1,14 +1,15 @@
 import React, { useEffect, useRef } from 'react'
 import PlusButton from '../assets/plusbutton.png'
 import { Context } from '../context/Context'
-import { DoneIcon } from '../assets/checkmark-green-sized.png'
+import DoneIcon from '../assets/checkmark-green-sized.png'
 import { user } from '../assets'
 
 class NewCard extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      showModal: false
+      showModal: false,
+      updatedCard: false
     }
   }
 
@@ -19,6 +20,8 @@ class NewCard extends React.Component {
 
   toggleModal = () => this.setState({ showModal: !this.state.showModal })
 
+  updatesCards = () => this.setState({ updatedCard: !this.state.updatedCard })
+
   render() {
     const { showModal } = this.state
 
@@ -27,40 +30,42 @@ class NewCard extends React.Component {
         <div className="card-container">
           <div className="wrapper">
             <div className="clash-card">
-              <img className="center-image" src={user} alt="The user image" />
-              <input
-                className="card-heading"
-                id="event-title"
-                type="text"
-                placeholder="Event title"
-              />
-              <hr className="card-line" />
-              <input
-                className="card-description"
-                id="event-time"
-                type="text"
-                placeholder="Event time"
-              />
-              <input
-                className="card-description"
-                id="event-date"
-                type="text"
-                placeholder="Event date"
-              />
-              <p />
-              <input
-                className="icard-description"
-                id="event-description"
-                type="text"
-                placeholder="Event description"
-              />
-              <button onClick={this.toggleModal}>
-                <img
-                  className="bottom-left-icon"
-                  src={DoneIcon}
-                  alt="A green checkmark"
+              <form onSubmit={this.updatesCards}>
+                <img className="center-image" src={user} alt="The user image" />
+                <input
+                  className="card-heading form-field"
+                  id="event-title"
+                  type="text"
+                  placeholder="Event title"
                 />
-              </button>
+                <hr className="card-line" />
+                <input
+                  className="card-description form-field"
+                  id="event-time"
+                  type="text"
+                  placeholder="Event time"
+                />
+                <input
+                  className="card-description form-field"
+                  id="event-date"
+                  type="text"
+                  placeholder="Event date"
+                />
+                <p />
+                <input
+                  className="card-description form-field-large"
+                  id="event-description"
+                  type="text"
+                  placeholder="Event description"
+                />
+                <button className="checkmark" onClick={this.toggleModal}>
+                  <img
+                    className="green-checkmark"
+                    src={DoneIcon}
+                    alt="A green checkmark"
+                  />
+                </button>
+              </form>
             </div>
           </div>
         </div>

@@ -1,30 +1,30 @@
-import React from 'react'
+import React, { useContext, Component } from 'react'
 import PropTypes from 'prop-types'
 import SignUpButton from '../assets/sign-up-button.png'
 import GoingButton from '../assets/going-button.png'
+import { Context } from '../context/Context'
+import SignUp from './SignUp'
 
 const Cards = ({ card }) => {
-  // let filteredCards=this.props.cards.filter(
-  // (card)=> {
-  //   return card.name.indexOf(this.state.search) !== -1;
+  // const { Going, setGoing } = useContext(Context)
+  // const onClick = () => {
+  //   setGoing(!Going)
   // }
 
-  const onClick = () => {
-    // setSignUp(!signUp);
-    // tell firebase to update card
-  }
-
-  const returnSignUpButtonArea = () => {
-    // if (!card.going) {
-    //   return (
-    //     <button type="button" onClick={onClick}>
-    //       <img classNamw="sign-up-button" src={SignUpButton} alt="A button" />
-    //     </button>
-    //   );
-    // }
-
-    return <img className="going-button" src={GoingButton} alt="A button" />
-  }
+  // const returnSignUpButtonArea = () => {
+  //   if (Going) {
+  //     return (
+  //       <button type="button" onClick={onClick}>
+  //         <img className="going-button" src={GoingButton} alt="A button" />{' '}
+  //       </button>
+  //     )
+  //   }
+  //   return (
+  //     <button type="button" onClick={onClick}>
+  //       <img className="going-button" src={SignUpButton} alt="A button" />
+  //     </button>
+  //   )
+  // }
 
   return (
     <div className="card-container">
@@ -32,8 +32,8 @@ const Cards = ({ card }) => {
         <div className="wrapper">
           <div className="clash-card">
             <div className="card-first-row">
-              {returnSignUpButtonArea()}
-              <img className="card-image" src={card.photolink} alt="Stuf" />
+              {<SignUp />}
+              <img className="card-image" src={card.photolink} alt="Stuff" />
             </div>
             <h4 className="card-heading">{card.title}</h4>
             <hr className="card-line" />

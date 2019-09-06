@@ -9,7 +9,7 @@ import ContextProvider from '../context/ContextProvider'
 import Calendar from '../components/Calendar'
 
 const CalendarPage = ({ calendarimage }) => {
-  const [loggedIn, setLoggedIn] = useState(false)
+  const [loggedIn, setLoggedIn] = useState(true)
   const [searchText, setSearchText] = useState('')
 
   return (

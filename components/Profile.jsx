@@ -1,15 +1,14 @@
-import React, { useContext } from 'react';
-import { Context } from '../context/Context';
-import { user } from '../assets';
+import React, { useContext } from 'react'
+import { Context } from '../context/Context'
+import { user } from '../assets'
 
 const Profile = () => {
-  const { loggedIn, setLoggedIn } = useContext(Context);
-
+  const { loggedIn, setLoggedIn } = useContext(Context)
   const onClick = () => {
-    setLoggedIn(!loggedIn);
-  };
+    setLoggedIn(!loggedIn)
+  }
 
-  const profileArea = children => <div className="profileArea">{children}</div>;
+  const profileArea = children => <div className="profileArea">{children}</div>
 
   if (loggedIn) {
     return profileArea(
@@ -19,14 +18,14 @@ const Profile = () => {
           Sign Out
         </button>
       </div>
-    );
+    )
   }
 
   return profileArea(
     <button onClick={onClick} type="button" className="signInButton">
       Sign In
     </button>
-  );
-};
+  )
+}
 
-export default Profile;
+export default Profile

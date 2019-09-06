@@ -8,8 +8,8 @@ import NavBar from '../components/NavBar'
 import ContextProvider from '../context/ContextProvider'
 import Directory from '../components/Directory'
 
-const DirectoryPage = ({ photos }) => {
-  const [loggedIn, setLoggedIn] = useState(false)
+const DirectoryPage = ({ directoryimage }) => {
+  const [loggedIn, setLoggedIn] = useState(true)
   const [searchText, setSearchText] = useState('')
 
   return (
@@ -22,43 +22,43 @@ const DirectoryPage = ({ photos }) => {
         </div>
         <div className="main">
           <NavBar />
-          <Directory photos={photos} />
+          <Directory directoryimage={directoryimage} />
         </div>
       </div>
     </ContextProvider>
   )
 }
 
-// eslint-disable-next-line func-names
-DirectoryPage.getInitialProps = async function() {
-  const photoresult = await new Promise((resolve, reject) => {
-    firebase
-      .firestore()
-      .collection('photos')
-      .get()
-      .then(snapshot => {
-        const photodata = []
-        snapshot.forEach(doc => {
-          photodata.push({
-            id: doc.id,
-            ...doc.photodata()
-          })
-        })
-        resolve(photodata)
-      })
-      .catch(() => {
-        reject(new Error('Something went wrong'))
-      })
-  })
-  return { photos: photoresult }
-}
+// // eslint-disable-next-line func-names
+// DirectoryPage.getInitialProps = async function() {
+//   const photoresult = await new Promise((resolve, reject) => {
+//     firebase
+//       .firestore()
+//       .collection('photos')
+//       .get()
+//       .then(snapshot => {
+//         const photodata = []
+//         snapshot.forEach(doc => {
+//           photodata.push({
+//             id: doc.id,
+//             ...doc.photodata()
+//           })
+//         })
+//         resolve(photodata)
+//       })
+//       .catch(() => {
+//         reject(new Error('Something went wrong'))
+//       })
+//   })
+//   return { photos: photoresult }
+// }
 
-DirectoryPage.propTypes = {
-  photos: PropTypes.arrayOf(
-    PropTypes.shape({
-      photo: PropTypes.string
-    })
-  ).isRequired
-}
+// DirectoryPage.propTypes = {
+//   photos: PropTypes.arrayOf(
+//     PropTypes.shape({
+//       photo: PropTypes.string
+//     })
+//   ).isRequired
+// }
 
 export default DirectoryPage

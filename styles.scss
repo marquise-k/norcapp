@@ -317,3 +317,35 @@ $font-size: 50px;
   justify-content: right;
   position: relative;
 }
+
+.form-field {
+  height: 35px;
+  border: 0;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  text-align: center;
+}
+
+.form-field-large {
+  height: 60px;
+  border: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  text-align: center;
+}
+
+.checkmark .green-checkmarl {
+  height: 30px;
+  width: 30px;
+  border: 0px;
+}
+
+.button-sign {
+  background: none;
+  border: none;
+}

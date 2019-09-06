@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Cards from './Cards'
 import NewCards from './NewCards'
 import { Context } from '../context/Context'
+import AddedCard from './AddedCard'
 
 // const filteredCards = filteredCards.filter(eachItem => {
 //   return (
@@ -17,6 +18,7 @@ import { Context } from '../context/Context'
 
 const CardArea = ({ cards }) => {
   const { searchText } = useContext(Context)
+  const { updatedCards } = useContext(Context)
   const [filteredCards, setFilterCards] = useState(
     cards.filter(
       card =>
@@ -24,6 +26,17 @@ const CardArea = ({ cards }) => {
         card.Description.toLowerCase().includes(searchText.toLowerCase())
     )
   )
+
+  if (updatedCards) {
+    return (
+      <div className="card-area">
+        <NewCards />
+        <AddedCard />
+        {filteredCards &&
+          filteredCards.map((card, index) => <Cards card={card} key={index} />)}
+      </div>
+    )
+  }
 
   return (
     <div className="card-area">

@@ -16,8 +16,8 @@ const Sidebar = () => (
         <img className="app-logo" src={AppLogo} alt="A dashboard" />
       </div>
       <div className="sidebar-items-line">
-        <Link href="/index" className="button-menu buttons">
-          <a>
+        <Link href="/index">
+          <a className="button-menu buttons">
             <img
               className="sidebar-image"
               src={DashboardIcon}
@@ -29,8 +29,8 @@ const Sidebar = () => (
       </div>
 
       <div className="sidebar-items-line">
-        <Link href="/CalendarPage" className="button-menu buttons">
-          <a>
+        <Link href="/CalendarPage">
+          <a className="button-menu buttons">
             <img
               className="sidebar-image"
               src={CalendarIcon}
@@ -42,8 +42,8 @@ const Sidebar = () => (
       </div>
 
       <div className="sidebar-items-line">
-        <Link href="/DirectoryPage" className="button-menu buttons">
-          <a>
+        <Link href="/DirectoryPage">
+          <a className="button-menu buttons">
             <img className="sidebar-image" src={PeopleIcon} alt="A directory" />
             <span className="sidebar-text">Directory</span>
           </a>

@@ -12,12 +12,22 @@ import ContextProvider from '../context/ContextProvider'
 //import 'font-awesome/scss/font-awesome.scss'
 
 const App = ({ cards }) => {
-  const [loggedIn, setLoggedIn] = useState(false)
+  const [loggedIn, setLoggedIn] = useState(true)
   const [searchText, setSearchText] = useState('')
+  const [Going, setGoing] = useState(false)
+  const [updatedCards] = useState(false)
 
   return (
     <ContextProvider
-      value={{ loggedIn, setLoggedIn, searchText, setSearchText }}
+      value={{
+        loggedIn,
+        setLoggedIn,
+        searchText,
+        setSearchText,
+        Going,
+        setGoing,
+        updatedCards
+      }}
     >
       <div>
         <div className="sideBar">
