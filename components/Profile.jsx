@@ -3,7 +3,7 @@ import { Context } from '../context/Context'
 import { user } from '../assets'
 
 const Profile = () => {
-  const { loggedIn, setLoggedIn } = useContext(Context)
+  const { loggedIn, setLgioggedIn } = useContext(Context)
   const onClick = () => {
     setLoggedIn(!loggedIn)
   }

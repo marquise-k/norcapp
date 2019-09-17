@@ -12,169 +12,169 @@ $font-stack: 'Roboto', sans-serif;
 $sidebarWidth: 260px;
 
 body {
-  background-color: #f2f2f2;
+	background-color: #f2f2f2;
 }
 
 .search-form {
-  display: flex;
-  margin: 0 auto 40px;
-  position: relative;
-  top: 0;
-  flex-grow: 1;
-  padding-left: 50px;
+	display: flex;
+	margin: 0 auto 40px;
+	position: relative;
+	top: 0;
+	flex-grow: 1;
+	padding-left: 50px;
 }
 
 .card-image {
-  height: 80px;
-  width: 80px;
-  border-radius: 50px;
-  justify-content: right;
-  position: relative;
+	height: 80px;
+	width: 80px;
+	border-radius: 50px;
+	justify-content: right;
+	position: relative;
 }
 
 .search-area {
-  padding-left: 50px;
-  width: 100%;
+	padding-left: 50px;
+	width: 100%;
 }
 
 .search-bar {
-  color: #bababa;
-  margin: 0;
-  width: 100%;
-  height: 90px;
-  border: 0;
-  padding: 0 90px;
-  font-size: 16px;
-  font-weight: bold;
-  outline: none;
-  align-items: right;
-  display: flex;
-  justify-content: right;
-  padding-left: 90px;
-  background-image: url('http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png');
-  background-repeat: no-repeat;
-  background-size: 60px 60px;
-  background-position: left center;
+	color: #bababa;
+	margin: 0;
+	width: 100%;
+	height: 90px;
+	border: 0;
+	padding: 0 90px;
+	font-size: 16px;
+	font-weight: bold;
+	outline: none;
+	align-items: right;
+	display: flex;
+	justify-content: right;
+	padding-left: 90px;
+	background-image: url('http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png');
+	background-repeat: no-repeat;
+	background-size: 60px 60px;
+	background-position: left center;
 
-  &:focus {
-    border: 1px solid #008abf;
-    transition: 0.35s ease;
-    color: #008abf;
-    &::-webkit-input-placeholder {
-      transition: opacity 0.45s ease;
-      opacity: 0;
-    }
-    &::-moz-placeholder {
-      transition: opacity 0.45s ease;
-      opacity: 0;
-    }
-    &:-ms-placeholder {
-      transition: opacity 0.45s ease;
-      opacity: 0;
-    }
-  }
+	&:focus {
+		border: 1px solid #008abf;
+		transition: 0.35s ease;
+		color: #008abf;
+		&::-webkit-input-placeholder {
+			transition: opacity 0.45s ease;
+			opacity: 0;
+		}
+		&::-moz-placeholder {
+			transition: opacity 0.45s ease;
+			opacity: 0;
+		}
+		&:-ms-placeholder {
+			transition: opacity 0.45s ease;
+			opacity: 0;
+		}
+	}
 }
 
 .search-button {
-  margin: auto;
+	margin: auto;
 }
 
 .search-icon {
-  width: 75px;
-  height: 75px;
+	width: 75px;
+	height: 75px;
 }
 
 .search-items {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: nowrap;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: nowrap;
 }
 
 .buttons .sidebar-items-line {
-  display: flex;
-  flex-wrap: wrap;
+	display: flex;
+	flex-wrap: wrap;
 }
 $font-size: 50px;
 
 .example {
-  font-size: $font-size;
+	font-size: $font-size;
 }
 
 .card-area {
-  display: flex;
-  flex-wrap: wrap;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .card-container {
-  // margin: auto;
-  // padding-right: 40px;
-  // text-align: center;
-  // display: inline-block;
-  // display: grid | inline-grid;
-  // grid-template-columns: 100px 50px 100px;
-  // grid-template-rows: 80px 80px 80px;
-  // grid-column-gap: 100px;
-  // grid-row-gap: 15px;
+	// margin: auto;
+	// padding-right: 40px;
+	// text-align: center;
+	// display: inline-block;
+	// display: grid | inline-grid;
+	// grid-template-columns: 100px 50px 100px;
+	// grid-template-rows: 80px 80px 80px;
+	// grid-column-gap: 100px;
+	// grid-row-gap: 15px;
 
-  //display: flex;
-  // flex-wrap: wrap;
-  // align-constent: flex-start;
-  // flex: 1;
-  // padding: 0 5rem 1.5rem;
-  // max-width: 400px;
-  // margin: 10px auto;
+	//display: flex;
+	// flex-wrap: wrap;
+	// align-constent: flex-start;
+	// flex: 1;
+	// padding: 0 5rem 1.5rem;
+	// max-width: 400px;
+	// margin: 10px auto;
 
-  display: inline-block;
-  margin: 8px;
-  max-width: 400px;
-  perspective: 1000;
-  position: relative;
-  text-align: left;
-  transition: all 0.3s 0s ease-in;
-  z-index: 1;
+	display: inline-block;
+	margin: 8px;
+	max-width: 400px;
+	perspective: 1000;
+	position: relative;
+	text-align: left;
+	transition: all 0.3s 0s ease-in;
+	z-index: 1;
 
-  .card-first-row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
+	.card-first-row {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 10px;
 
-    .going-button {
-      padding-right: 20px;
-    }
-  }
+		.going-button {
+			padding-right: 20px;
+		}
+	}
 }
 
 .wrapper {
-  padding: 20px 20px 0px 90px;
-  display: inline-block;
-  &:focus {
-    outline: 0;
-  }
+	padding: 20px 20px 0px 90px;
+	display: inline-block;
+	&:focus {
+		outline: 0;
+	}
 }
 
 .clash-card {
-  background: white;
-  width: 241px;
-  height: 350px;
-  display: inline-block;
-  margin: auto;
-  border-radius: $border-radius-size + 5;
-  position: relative;
-  text-align: center;
-  box-shadow: -1px 15px 20px -12px rgb(209, 208, 208);
-  z-index: 1;
+	background: white;
+	width: 241px;
+	height: 350px;
+	display: inline-block;
+	margin: auto;
+	border-radius: $border-radius-size + 5;
+	position: relative;
+	text-align: center;
+	box-shadow: -1px 15px 20px -12px rgb(209, 208, 208);
+	z-index: 1;
 }
 
 .card-line {
-  color: #c1c0c0;
-  background-color: #c1c0c0;
-  width: 80%;
-  border: 0;
-  height: 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+	color: #c1c0c0;
+	background-color: #c1c0c0;
+	width: 80%;
+	border: 0;
+	height: 0;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 //TODO: Change the card line color to the one I specified (it doesn't render that way)
@@ -182,183 +182,186 @@ $font-size: 50px;
 *,
 *:before,
 *:after {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .sideBar {
-  height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: $sidebarWidth; /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
-  left: 0;
-  overflow-x: hidden; /* Disable horizontal scroll */
-  overflow-y: hidden;
-  padding-top: 20px;
-  background-color: white;
+	height: 100%; /* Full-height: remove this if you want "auto" height */
+	width: $sidebarWidth; /* Set the width of the sidebar */
+	position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+	z-index: 1; /* Stay on top */
+	top: 0; /* Stay at the top */
+	left: 0;
+	overflow-x: hidden; /* Disable horizontal scroll */
+	overflow-y: hidden;
+	padding-top: 20px;
+	background-color: white;
 
-  .sidebar-items-line {
-    display: flex;
-  }
+	.sidebar-items-line {
+		display: flex;
+	}
 }
 
 .main {
-  margin-left: $sidebarWidth; /* Same as the width of the sidebar */
+	margin-left: $sidebarWidth; /* Same as the width of the sidebar */
 }
 
 .button-menu {
-  color: black;
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  font-weight: bold;
-  text-decoration: none;
-  margin-bottom: 50px;
-  display: inline-block;
-  width: 50%;
+	color: black;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	text-decoration: none;
+	margin-bottom: 50px;
+	display: inline-block;
+	width: 50%;
 }
 
 .card-description {
-  color: $card-text-color;
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  padding: 0 15px 0px;
+	color: $card-text-color;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	padding: 0 15px 0px;
 }
 
 .card-heading {
-  color: black;
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  font-weight: bold;
+	color: black;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	font-weight: bold;
 }
 
 .sidebar-items {
-  margin-top: 200px;
-  margin-left: 40px;
+	margin-top: 200px;
+	margin-left: 40px;
 }
 
 .plus-button {
-  margin-top: 20px;
+	margin-top: 20px;
 }
 
 .navBar {
-  display: flex;
+	display: flex;
 
-  .profileArea {
-    width: 200px;
-    padding-left: 20px;
-    height: 20px;
+	.profileArea {
+		width: 200px;
+		padding-left: 20px;
+		height: 20px;
 
-    .signedInArea {
-      display: flex;
+		.signedInArea {
+			display: flex;
 
-      .signedInImage {
-        width: 90px;
-        height: 90px;
-      }
-    }
+			.signedInImage {
+				width: 90px;
+				height: 90px;
+			}
+		}
 
-    .signInButton {
-      width: 80px;
-      flex-grow: 1;
-      height: 90px;
-    }
-  }
+		.signInButton {
+			width: 80px;
+			flex-grow: 1;
+			height: 90px;
+		}
+	}
 }
 
 //TODO: Incorporate conditional formatting where if a page is up its black and if not its grey as per figma
 
 .sidebar-text {
-  font-size: 20px;
-  padding: 20px 15px 20px 15px;
-  position: relative;
-  margin-top: 15px;
-  color: black;
-  font-family: 'Roboto', sans-serif;
-  font-weight: bold;  
+	font-size: 20px;
+	padding: 20px 15px 20px 15px;
+	position: relative;
+	margin-top: 15px;
+	color: black;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
 }
 
 .sidebar-text-selected {
-  color: grey !important;
+	color: grey !important;
 }
 
-
 .sidebar-bottom-line {
-  position: relative;
-  margin: 450px auto;
-  display: flex;
-  flex-wrap: wrap;
+	position: relative;
+	margin: 450px auto;
+	display: flex;
+	flex-wrap: wrap;
 
-  //TODO: Fix help to stay put.
+	//TODO: Fix help to stay put.
 }
 
 .sidebar-image {
-  padding: 20px 5px 20px 15px;
-  position: relative;
-  margin-top: 15px;
+	padding: 20px 5px 20px 15px;
+	position: relative;
+	margin-top: 15px;
 }
 
 .button-menu {
-  display: flex;
+	display: flex;
 }
 
 .logo-area {
-  padding-bottom: 50px;
-  position: relative;
+	padding-bottom: 50px;
+	position: relative;
 }
 
 .newCardButton {
-  background: none;
-  border: none;
+	background: none;
+	border: none;
 }
 
 .calendar-image {
-  width: 1400px;
-  height: 800px;
+	width: 1400px;
+	height: 800px;
 }
 
 .center-image {
-  height: 80px;
-  width: 80px;
-  border-radius: 50px;
-  justify-content: right;
-  position: relative;
+	height: 80px;
+	width: 80px;
+	border-radius: 50px;
+	justify-content: right;
+	position: relative;
 }
 
 .form-field {
-  height: 35px;
-  border: 0;
-  padding-bottom: 10px;
-  // display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  text-align: center;
+	height: 35px;
+	border: 0;
+	padding-bottom: 10px;
+	// display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+	text-align: center;
 }
 
 .form-field-large {
-  height: 60px;
-  border: 0px;
-  // display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  text-align: center;
+	height: 60px;
+	border: 0px;
+	// display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+	text-align: center;
 }
 
 .checkmark .green-checkmarl {
-  height: 30px;
-  width: 30px;
-  border: 0px;
+	height: 30px;
+	width: 30px;
+	border: 0px;
 }
 
 .button-sign {
-  background: none;
-  border: none;
-  width: 120px;
-  height: 40px;
+	background: none;
+	border: none;
+	width: 120px;
+	height: 40px;
 }
 
 .checkmark {
-  background: none;
-  border: none;
+	background: none;
+	border: none;
+}
+
+.special {
+	margin-left: 200px;
 }
