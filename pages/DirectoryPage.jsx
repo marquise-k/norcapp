@@ -49,12 +49,14 @@ DirectoryPage.getInitialProps = async function() {
 						...doc.photodata()
 					});
 				});
+				console.log(photodata);
 				resolve(photodata);
 			})
 			.catch(() => {
 				reject(new Error('Something went wrong'));
 			});
 	});
+	console.log(photoresult);
 	return { photos: photoresult };
 };
 
